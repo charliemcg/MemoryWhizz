@@ -63,7 +63,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="125dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -75,7 +75,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="187dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -87,7 +87,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="249dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -99,7 +99,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="311dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -111,7 +111,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="340dp"
+            android:layout_marginTop="373dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -207,6 +207,15 @@
 
     </RelativeLayout>
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:elevation="100dp"/>
+
     <RelativeLayout>
         <TableLayout
             android:layout_width="match_parent"
@@ -233,13 +242,5 @@
             </TableRow>
         </TableLayout>
     </RelativeLayout>
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"/>
 
 </TableLayout>

@@ -12,14 +12,14 @@
 
     <RelativeLayout
         android:layout_width="300dp"
-        android:layout_height="900dp"
-        android:layout_marginTop="120dp">
+        android:layout_height="950dp"
+        android:layout_marginTop="50dp">
 
         <Button
             android:id="@+id/splash"
-            android:layout_marginTop="120dp"
-            android:layout_width="495dp"
-            android:layout_height="695dp"
+            android:layout_marginTop="160dp"
+            android:layout_width="510dp"
+            android:layout_height="760dp"
             android:layout_centerHorizontal="true"
             android:background="@color/lightCyan"
             android:clickable="false"/>
@@ -27,20 +27,20 @@
         <Button
             android:id="@+id/splashPlay"
             android:layout_width="380dp"
-            android:layout_height="140dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:background="@color/cyan"
             android:textColor="@color/black"
             android:textSize="25dp"
-            android:layout_marginTop="175dp"
+            android:layout_marginTop="230dp"
             android:soundEffectsEnabled="true"/>
 
         <Button
             android:id="@+id/splashHighScores"
             android:layout_width="380dp"
-            android:layout_height="140dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="392dp"
+            android:layout_marginTop="460dp"
             android:textColor="@color/black"
             android:textSize="25dp"
             android:background="@color/cyan"
@@ -49,13 +49,13 @@
         <Button
             android:id="@+id/splashMusic"
             android:layout_width="380dp"
-            android:layout_height="140dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:background="@color/cyan"
             android:textColor="@color/black"
             android:textSize="25dp"
             android:layout_alignBottom="@+id/splash"
-            android:layout_marginBottom="65dp"
+            android:layout_marginBottom="80dp"
             android:soundEffectsEnabled="true"/>
 
         <TextView
@@ -66,7 +66,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="50sp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="270dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -78,7 +78,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="50sp"
-            android:layout_marginTop="315dp"
+            android:layout_marginTop="385dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -90,7 +90,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="50sp"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="500dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -102,7 +102,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="50sp"
-            android:layout_marginTop="545dp"
+            android:layout_marginTop="615dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -114,7 +114,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="50sp"
-            android:layout_marginTop="660dp"
+            android:layout_marginTop="730dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -205,10 +205,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:id="@+id/title"
             android:background="@drawable/titleimage"/>
 
     </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"/>
 
     <RelativeLayout>
         <TableLayout
@@ -236,13 +247,5 @@
             </TableRow>
         </TableLayout>
     </RelativeLayout>
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"/>
 
 </TableLayout>

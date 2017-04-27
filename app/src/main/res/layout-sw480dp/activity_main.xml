@@ -12,12 +12,12 @@
 
     <RelativeLayout
         android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_height="580dp"
         android:layout_marginTop="30dp">
 
         <Button
             android:id="@+id/splash"
-            android:layout_marginTop="2.5dp"
+            android:layout_marginTop="80dp"
             android:layout_width="295dp"
             android:layout_height="495dp"
             android:layout_centerHorizontal="true"
@@ -26,33 +26,36 @@
 
         <Button
             android:id="@+id/splashPlay"
-            android:layout_width="250dp"
+            android:layout_width="230dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:background="@color/cyan"
             android:textColor="@color/black"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="130dp"
+            android:textSize="16sp"
             android:soundEffectsEnabled="true"/>
 
         <Button
             android:id="@+id/splashHighScores"
-            android:layout_width="250dp"
+            android:layout_width="230dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="280dp"
             android:textColor="@color/black"
             android:background="@color/cyan"
+            android:textSize="16sp"
             android:soundEffectsEnabled="true"/>
 
         <Button
             android:id="@+id/splashMusic"
-            android:layout_width="250dp"
+            android:layout_width="230dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:background="@color/cyan"
             android:textColor="@color/black"
             android:layout_alignBottom="@+id/splash"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="45dp"
+            android:textSize="16sp"
             android:soundEffectsEnabled="true"/>
 
         <TextView
@@ -62,8 +65,8 @@
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="70dp"
+            android:textSize="25sp"
+            android:layout_marginTop="140dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -74,8 +77,8 @@
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="150dp"
+            android:textSize="25sp"
+            android:layout_marginTop="220dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -86,8 +89,8 @@
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="230dp"
+            android:textSize="25sp"
+            android:layout_marginTop="300dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -98,8 +101,8 @@
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="310dp"
+            android:textSize="25sp"
+            android:layout_marginTop="380dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -110,8 +113,8 @@
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="390dp"
+            android:textSize="25sp"
+            android:layout_marginTop="460dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -126,21 +129,21 @@
 
                 <Button
                     android:id="@+id/buttonA"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
                     android:soundEffectsEnabled="true"/>
                 <Button
                     android:id="@+id/buttonB"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
                     android:soundEffectsEnabled="true"/>
                 <Button
                     android:id="@+id/buttonC"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
@@ -150,21 +153,21 @@
             <TableRow>
                 <Button
                     android:id="@+id/buttonD"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
                     android:soundEffectsEnabled="true"/>
                 <Button
                     android:id="@+id/buttonE"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
                     android:soundEffectsEnabled="true"/>
                 <Button
                     android:id="@+id/buttonF"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
@@ -174,21 +177,21 @@
             <TableRow>
                 <Button
                     android:id="@+id/buttonG"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
                     android:soundEffectsEnabled="true"/>
                 <Button
                     android:id="@+id/buttonH"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
                     android:soundEffectsEnabled="true"/>
                 <Button
                     android:id="@+id/buttonI"
-                    android:layout_height="120dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:layout_margin="2dp"
                     android:background="@color/cyan"
@@ -199,6 +202,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:id="@+id/title"
             android:background="@drawable/titleimage" />
 
@@ -207,24 +213,24 @@
     <RelativeLayout>
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp">
+            android:layout_height="110dp">
             <TableRow>
                 <TextView
                     android:id="@+id/score"
-                    android:layout_width="400dp"
+                    android:layout_width="480dp"
                     android:layout_height="60dp"
                     android:textAlignment="center"
-                    android:textSize="40sp"
+                    android:textSize="30sp"
                     android:textColor="@color/black"
                     android:soundEffectsEnabled="true"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:id="@+id/points"
-                    android:layout_width="400dp"
+                    android:layout_width="480dp"
                     android:layout_height="60dp"
                     android:textAlignment="center"
-                    android:textSize="40sp"
+                    android:textSize="30sp"
                     android:textColor="@color/black"
                     android:soundEffectsEnabled="true"/>
             </TableRow>
@@ -235,8 +241,7 @@
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        ads:adSize="BANNER"
+        ads:adSize="FULL_BANNER"
         ads:adUnitId="@string/banner_ad_unit_id"/>
 
 </TableLayout>
