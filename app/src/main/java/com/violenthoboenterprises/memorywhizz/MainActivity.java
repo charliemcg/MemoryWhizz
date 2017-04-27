@@ -146,13 +146,13 @@ public class MainActivity extends AppCompatActivity {
         //Initializing interstitial ad.
         final InterstitialAd interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId(getResources().getString(R.string.interstitial_ad_unit_id));
-        final AdRequest intRequest = new AdRequest.Builder().addTestDevice
-                (AdRequest.DEVICE_ID_EMULATOR).build();
+        final AdRequest intRequest = new AdRequest.Builder()/*.addTestDevice
+                (AdRequest.DEVICE_ID_EMULATOR)*/.build();
 
         //Initializing banner ad.
         final AdView bannerAd = (AdView)findViewById(R.id.adView);
-        final AdRequest banRequest = new AdRequest.Builder().addTestDevice
-                (AdRequest.DEVICE_ID_EMULATOR).build();
+        final AdRequest banRequest = new AdRequest.Builder()/*.addTestDevice
+                (AdRequest.DEVICE_ID_EMULATOR)*/.build();
         bannerAd.loadAd(banRequest);
 
         //Goes to high scores when "High Scores" clicked.
@@ -618,8 +618,8 @@ public class MainActivity extends AppCompatActivity {
                         multiplier = 1;
 
                         //Interstitial is displayed after the 1st, 5th and 20th game.
-                        if(interstitialAd.isLoaded() && (showInterstitial == 0 ||
-                                showInterstitial == 6 || showInterstitial == 20)){
+                        if(interstitialAd.isLoaded() && (showInterstitial == 1 ||
+                                showInterstitial == 7 || showInterstitial == 20)){
                             interstitialAd.show();
                         }
 
@@ -731,6 +731,7 @@ public class MainActivity extends AppCompatActivity {
             toastMessage.setTextColor(Color.BLACK);
             toastView.setBackgroundColor(Color.CYAN);
             toast.show();
+
             exitGame = true;
 
             //Exits game.
