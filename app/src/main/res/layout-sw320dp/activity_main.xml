@@ -225,7 +225,6 @@
         ads:adUnitId="@string/banner_ad_unit_id"
         android:elevation="100dp"/>
 
-    <RelativeLayout>
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="80dp">
@@ -250,6 +249,5 @@
                     android:soundEffectsEnabled="true"/>
             </TableRow>
         </TableLayout>
-    </RelativeLayout>
 
 </TableLayout>

@@ -204,7 +204,6 @@
 
     </RelativeLayout>
 
-    <RelativeLayout>
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="240dp">
@@ -229,7 +228,6 @@
                     android:soundEffectsEnabled="true"/>
             </TableRow>
         </TableLayout>
-    </RelativeLayout>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
