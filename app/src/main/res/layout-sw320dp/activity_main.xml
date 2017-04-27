@@ -13,13 +13,13 @@
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="460dp"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="15dp">
 
         <Button
             android:id="@+id/splash"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="80dp"
             android:layout_width="245dp"
-            android:layout_height="335dp"
+            android:layout_height="365dp"
             android:layout_centerHorizontal="true"
             android:background="@color/lightCyan"
             android:clickable="false"/>
@@ -27,19 +27,19 @@
         <Button
             android:id="@+id/splashPlay"
             android:layout_width="170dp"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:background="@color/cyan"
             android:textColor="@color/black"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="110dp"
             android:soundEffectsEnabled="true"/>
 
         <Button
             android:id="@+id/splashHighScores"
             android:layout_width="170dp"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="203dp"
+            android:layout_marginTop="220dp"
             android:textColor="@color/black"
             android:background="@color/cyan"
             android:soundEffectsEnabled="true"/>
@@ -47,12 +47,12 @@
         <Button
             android:id="@+id/splashMusic"
             android:layout_width="170dp"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:background="@color/cyan"
             android:textColor="@color/black"
             android:layout_alignBottom="@+id/splash"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="35dp"
             android:soundEffectsEnabled="true"/>
 
         <TextView
@@ -199,6 +199,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="15dp"
             android:id="@+id/title"
             android:background="@drawable/titleimage" />
 

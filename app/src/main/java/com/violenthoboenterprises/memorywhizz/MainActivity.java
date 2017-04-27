@@ -390,10 +390,13 @@ public class MainActivity extends AppCompatActivity {
                           final Handler handler, final MediaPlayer[] click, final MediaPlayer fail,
                           final AdView bannerAd, final InterstitialAd interstitialAd) {
 
+
+        final String buttons = getResources().getString(R.string.buttons);
+
         //Initializing TextView to display the buttons remembered.
         TextView score = (TextView) findViewById(R.id.score);
         String zeroOfOne = getResources().getString(R.string.zero_of_one);
-        score.setText(zeroOfOne);
+        score.setText(buttons + " " + zeroOfOne);
 
         //Initializing TextView to display points
         TextView pointsEarned = (TextView) findViewById(R.id.points);
@@ -455,7 +458,7 @@ public class MainActivity extends AppCompatActivity {
                         seqNum[0]++;
 
                         //Updates the buttons remembered as player progresses.
-                        finalScore.setText(seqNum[0] + "/" + k[0]);
+                        finalScore.setText(buttons + " " + seqNum[0] + "/" + k[0]);
 
                         //Updates points earned as player progresses.
                         String partialScore = getResources().getString(R.string.partial_score);
@@ -500,7 +503,7 @@ public class MainActivity extends AppCompatActivity {
                             //Buttons correctly selected are reset to zero out of
                             //the total amount available.
                             String scoreReset = zero + k[0];
-                            finalScore.setText(scoreReset);
+                            finalScore.setText(buttons + " " + scoreReset);
                             finalPointsEarned.setText(partialScore + " " + points);
                         }
                     }
