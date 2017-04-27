@@ -56,6 +56,16 @@
             android:soundEffectsEnabled="true"/>
 
         <TextView
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="85dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/highScoreTitle"
+            android:background="@drawable/highscores"
+            android:visibility="gone"
+            android:elevation="100dp"/>
+
+        <TextView
             android:id="@+id/highScoreTextViewA"
             android:layout_width="250dp"
             android:layout_height="30dp"
@@ -63,7 +73,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="125dp"
+            android:layout_marginTop="145dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -75,7 +85,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="187dp"
+            android:layout_marginTop="207dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -87,7 +97,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="249dp"
+            android:layout_marginTop="269dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -99,7 +109,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="311dp"
+            android:layout_marginTop="331dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 
@@ -111,7 +121,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="373dp"
+            android:layout_marginTop="393dp"
             android:visibility="gone"
             android:elevation="100dp"/>
 

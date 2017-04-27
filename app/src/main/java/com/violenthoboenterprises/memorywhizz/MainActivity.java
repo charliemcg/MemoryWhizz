@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         final Button splashPlay = (Button) findViewById(R.id.splashPlay);
         final Button splashHighScores = (Button) findViewById(R.id.splashHighScores);
         final Button splashMusic = (Button) findViewById(R.id.splashMusic);
+        final TextView highScoreTitle = (TextView) findViewById(R.id.highScoreTitle);
 
         //Assigning strings to buttons.
         splashPlay.setText(playString);
@@ -157,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         //Goes to high scores when "High Scores" clicked.
         splashHighScores.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                highScores(splashPlay, splashHighScores, splashMusic, vibrate);
+                highScores(splashPlay, splashHighScores, splashMusic, vibrate, highScoreTitle);
             }
         });
 
@@ -235,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Accesses high scores.
-    private void highScores(Button splashPlay, Button splashHighScores, Button splashMusic, Vibrator vibrate) {
+    private void highScores(Button splashPlay, Button splashHighScores, Button splashMusic, Vibrator vibrate, TextView highScoreTitle) {
 
         //Initializing high score TextViews
         final TextView highScoreTextViewA = (TextView) findViewById(R.id.highScoreTextViewA);
@@ -318,6 +319,7 @@ public class MainActivity extends AppCompatActivity {
             splashPlay.setVisibility(GONE);
             splashHighScores.setVisibility(GONE);
             splashMusic.setVisibility(GONE);
+            highScoreTitle.setVisibility(VISIBLE);
             highScoreTextViewA.setVisibility(VISIBLE);
             highScoreTextViewB.setVisibility(VISIBLE);
             highScoreTextViewC.setVisibility(VISIBLE);
@@ -697,6 +699,9 @@ public class MainActivity extends AppCompatActivity {
 
             Button splashMusic = (Button) findViewById(R.id.splashMusic);
             splashMusic.setVisibility(VISIBLE);
+
+            TextView highScoreTitle = (TextView) findViewById(R.id.highScoreTitle);
+            highScoreTitle.setVisibility(GONE);
 
             TextView highScoreTextViewA = (TextView) findViewById(R.id.highScoreTextViewA);
             highScoreTextViewA.setVisibility(GONE);
