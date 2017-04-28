@@ -153,7 +153,8 @@ public class MainActivity extends AppCompatActivity {
         final AdView bannerAd = (AdView)findViewById(R.id.adView);
         final AdRequest banRequest = new AdRequest.Builder()/*.addTestDevice
                 (AdRequest.DEVICE_ID_EMULATOR)*/.build();
-        bannerAd.loadAd(banRequest);
+//        bannerAd.loadAd(banRequest);
+        //TODO enable banner ad
 
         //Goes to high scores when "High Scores" clicked.
         splashHighScores.setOnClickListener(new View.OnClickListener(){
@@ -245,11 +246,6 @@ public class MainActivity extends AppCompatActivity {
         final TextView highScoreTextViewD = (TextView) findViewById(R.id.highScoreTextViewD);
         final TextView highScoreTextViewE = (TextView) findViewById(R.id.highScoreTextViewE);
 
-//        final int tempA = MainActivity.getHighScoreA();
-//        final int tempB = MainActivity.getHighScoreB();
-//        final int tempC = MainActivity.getHighScoreC();
-//        final int tempD = MainActivity.getHighScoreD();
-//        final int tempE = MainActivity.getHighScoreE();
         final int tempA = highScoreArray[5];
         final int tempB = highScoreArray[4];
         final int tempC = highScoreArray[3];
@@ -518,7 +514,8 @@ public class MainActivity extends AppCompatActivity {
                         vibrate.vibrate(100);
 
                         //Banner ad is enabled.
-                        bannerAd.setVisibility(VISIBLE);
+//                        bannerAd.setVisibility(VISIBLE);
+                        //TODO enable banner ad
 
                         //Customized toast informs player of how many buttons they could remember.
                         if (k[0] != 2) {
@@ -584,7 +581,7 @@ public class MainActivity extends AppCompatActivity {
                         //Sorts array numerically.
                         Arrays.sort(highScoreArray);
 
-//                        Uncomment to see high scores in console.
+                        //Uncomment to see high scores in console.
 //                        for (int i = 0; i <= 5; i++) {
 //                            System.out.println("Value: " + highScoreArray[i] +
 //                              " and index: " + i);
@@ -620,7 +617,8 @@ public class MainActivity extends AppCompatActivity {
                         //Interstitial is displayed after the 1st, 5th and 20th game.
                         if(interstitialAd.isLoaded() && (showInterstitial == 1 ||
                                 showInterstitial == 7 || showInterstitial == 20)){
-                            interstitialAd.show();
+//                            interstitialAd.show();
+                            //TODO enable interstitial
                         }
 
                         //Incremented after every game to determine when interstitials

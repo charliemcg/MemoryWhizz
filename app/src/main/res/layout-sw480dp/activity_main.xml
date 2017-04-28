@@ -225,8 +225,9 @@
             <TableRow>
                 <TextView
                     android:id="@+id/score"
-                    android:layout_width="480dp"
+                    android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:layout_weight="1"
                     android:textAlignment="center"
                     android:textSize="30sp"
                     android:textColor="@color/black"
@@ -235,8 +236,9 @@
             <TableRow>
                 <TextView
                     android:id="@+id/points"
-                    android:layout_width="480dp"
+                    android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:layout_weight="1"
                     android:textAlignment="center"
                     android:textSize="30sp"
                     android:textColor="@color/black"

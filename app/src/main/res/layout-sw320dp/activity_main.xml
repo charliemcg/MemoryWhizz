@@ -225,29 +225,31 @@
         ads:adUnitId="@string/banner_ad_unit_id"
         android:elevation="100dp"/>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp">
-            <TableRow>
-                <TextView
-                    android:id="@+id/score"
-                    android:layout_width="350dp"
-                    android:layout_height="40dp"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:soundEffectsEnabled="true"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:id="@+id/points"
-                    android:layout_width="350dp"
-                    android:layout_height="40dp"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:soundEffectsEnabled="true"/>
-            </TableRow>
-        </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TableRow>
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:soundEffectsEnabled="true"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:soundEffectsEnabled="true"/>
+        </TableRow>
+    </TableLayout>
 
 </TableLayout>
