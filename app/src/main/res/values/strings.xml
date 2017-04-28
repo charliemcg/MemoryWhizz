@@ -9,8 +9,8 @@
     <string name="play">PLAY!</string>
     <string name="buttons">Buttons: </string>
     <string name="high_scores">High Scores</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2378583121223638/7420004302</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-2378583121223638/2850203903</string>
 </resources>
     <!--TODO get real ad IDs-->
     <!--Test ad IDs-->

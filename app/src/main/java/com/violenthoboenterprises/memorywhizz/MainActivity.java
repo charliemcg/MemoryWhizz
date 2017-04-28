@@ -153,8 +153,7 @@ public class MainActivity extends AppCompatActivity {
         final AdView bannerAd = (AdView)findViewById(R.id.adView);
         final AdRequest banRequest = new AdRequest.Builder()/*.addTestDevice
                 (AdRequest.DEVICE_ID_EMULATOR)*/.build();
-//        bannerAd.loadAd(banRequest);
-        //TODO enable banner ad
+        bannerAd.loadAd(banRequest);
 
         //Goes to high scores when "High Scores" clicked.
         splashHighScores.setOnClickListener(new View.OnClickListener(){
@@ -514,8 +513,7 @@ public class MainActivity extends AppCompatActivity {
                         vibrate.vibrate(100);
 
                         //Banner ad is enabled.
-//                        bannerAd.setVisibility(VISIBLE);
-                        //TODO enable banner ad
+                        bannerAd.setVisibility(VISIBLE);
 
                         //Customized toast informs player of how many buttons they could remember.
                         if (k[0] != 2) {
@@ -617,8 +615,7 @@ public class MainActivity extends AppCompatActivity {
                         //Interstitial is displayed after the 1st, 5th and 20th game.
                         if(interstitialAd.isLoaded() && (showInterstitial == 1 ||
                                 showInterstitial == 7 || showInterstitial == 20)){
-//                            interstitialAd.show();
-                            //TODO enable interstitial
+                            interstitialAd.show();
                         }
 
                         //Incremented after every game to determine when interstitials
