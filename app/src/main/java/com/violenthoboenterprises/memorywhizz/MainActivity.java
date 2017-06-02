@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences mSharedPreferences;
 
+    //Used to display all intermittent values during all live score updates.
+    int l;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -236,7 +239,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Accesses high scores.
-    private void highScores(Button splashPlay, Button splashHighScores, Button splashMusic, Vibrator vibrate, TextView highScoreTitle) {
+    private void highScores(Button splashPlay, Button splashHighScores, Button splashMusic,
+                            Vibrator vibrate, TextView highScoreTitle) {
 
         //Initializing high score TextViews
         final TextView highScoreTextViewA = (TextView) findViewById(R.id.highScoreTextViewA);
@@ -391,9 +395,9 @@ public class MainActivity extends AppCompatActivity {
         final String buttons = getResources().getString(R.string.buttons);
 
         //Initializing TextView to display the buttons remembered.
-        TextView score = (TextView) findViewById(R.id.score);
+        final TextView[] score = {(TextView) findViewById(R.id.score)};
         String zeroOfOne = getResources().getString(R.string.zero_of_one);
-        score.setText(buttons + " " + zeroOfOne);
+        score[0].setText(buttons + " " + zeroOfOne);
 
         //Initializing TextView to display points
         TextView pointsEarned = (TextView) findViewById(R.id.points);
@@ -410,10 +414,10 @@ public class MainActivity extends AppCompatActivity {
         final String zero = getResources().getString(R.string.zero);
 
         //Iterates over the buttons to find which one was clicked.
-        for (int j = 0; j < 9; j++){
+        for (final int[] j = {0}; j[0] < 9; j[0]++){
             highestScore[0] = highScoreArray[5];
-            final int finalJ = j;
-            final TextView finalScore = score;
+            final int finalJ = j[0];
+            final TextView finalScore = score[0];
             final TextView finalPointsEarned = pointsEarned;
             btn[finalJ].setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v) {
@@ -457,12 +461,13 @@ public class MainActivity extends AppCompatActivity {
                         //Updates the buttons remembered as player progresses.
                         finalScore.setText(buttons + " " + seqNum[0] + "/" + k[0]);
 
-                        //Updates points earned as player progresses.
                         String partialScore = getResources().getString(R.string.partial_score);
-                        finalPointsEarned.setText(partialScore + " " + points);
+
+                        //Updates points earned as player progresses.
+                        createScoreThread(partialScore);
 
                         //Code block entered once player has successfully selected all of the
-                        // buttons in the sequence.
+                        //buttons in the sequence.
                         if (k[0] == seqNum[0]) {
 
                             //Player is awarded an additional 39 points for completing
@@ -501,7 +506,6 @@ public class MainActivity extends AppCompatActivity {
                             //the total amount available.
                             String scoreReset = zero + k[0];
                             finalScore.setText(buttons + " " + scoreReset);
-                            finalPointsEarned.setText(partialScore + " " + points);
                         }
                     }
 
@@ -622,6 +626,40 @@ public class MainActivity extends AppCompatActivity {
                         //should be shown.
                         showInterstitial++;
 
+                        //Resets score to 0.
+                        l = 0;
+
+                    }
+                }
+
+                //Updates score on separate thread
+                private void createScoreThread(final String partialScore) {
+                    Runnable myRunnable = new Runnable() {
+                        @Override
+                        public void run() {
+                            updateScore(partialScore);
+                        }
+                    };
+                    new Thread(myRunnable).start();
+                }
+
+                private void updateScore(final String partialScore) {
+                    //Displays all numbers between previous score and current score
+                    for(int i = l; i < points; i++){
+                        try {
+                            //Short delay to make effect of counting up
+                            Thread.sleep(5);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        final int finalI = i;
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                finalPointsEarned.setText(partialScore + " " + finalI);
+                                l = points;
+                            }
+                        });
                     }
                 }
             });
